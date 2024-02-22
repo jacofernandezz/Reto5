@@ -5,6 +5,8 @@ spring:
 products.openapi:
   dev-url: http://www.dev.microcompany.es
   prod-url: http://www.prod.microcompany.es
+
+app.jwt.secret: SECRET-KEY-VALUE
 ---
 
 spring:
