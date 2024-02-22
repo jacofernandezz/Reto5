@@ -1,10 +1,12 @@
 spring:
   application.name: AccountService
   profiles.active: dev
+  security.oauth2.resourceserver.jwt.issuer-uri: http://auth-server:9000
 
 products.openapi:
   dev-url: http://www.dev.microcompany.es
   prod-url: http://www.prod.microcompany.es
+
 ---
 
 spring:

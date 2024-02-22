@@ -53,8 +53,8 @@ public class AccountController {
             @ApiResponse(responseCode = "200", description = "Cuando hay cuentas a devolver."),
             @ApiResponse(responseCode = "404", description = "Cuando no hay cuentas a devolver.")
     })
-    public ResponseEntity<?> getAccounts() {
-        return ResponseEntity.status(HttpStatus.OK).body(accountModelAssembler.toCollectionModel(accountService.getAccounts()));
+    public ResponseEntity<List<Account>> getAccounts() {
+        return ResponseEntity.status(HttpStatus.OK).body(accountService.getAccounts());
     }
 
     @GetMapping("/{id}")
